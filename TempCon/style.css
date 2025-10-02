@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: #eeaeca;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+form {
+  /* margin-top: 10%;
+    margin-left: 40%; */
+}
+
+.title {
+  color: white;
+  margin: 30px 0 15px 0;
+}
+
+.content {
+  display: block;
+  margin: 10%;
+}
+
+label {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#celsius, #fahrenheit, #kelvin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* for Mozila firefox */
+input {
+  -moz-appearance: textfield;
+}
+
+.icon {
+  flex: 1;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 20px;
+  background: #bfa5cf;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+}
+
+input {
+  flex: 5;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  padding: 0 10px;
+}
+
+button {
+  width: 30%;
+  border: none;
+  border-radius: 15px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  background: #bfa5cf;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.glass-card {
+  width: 45%;
+  height: 560px;
+  margin: 4% auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 20px 10px rgba(255, 255, 255, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
